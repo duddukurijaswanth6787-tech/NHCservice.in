@@ -834,3 +834,29 @@ FINAL NOTES
 - Create sitemap
 
 This prompt provides a complete blueprint for recreating the NHC Service website with all frontend and backend functionality, design specifications, and implementation details.
+
+================================================================================
+ACTUAL TEST PLAN - 2026-02-22
+================================================================================
+
+I will be acting as a tester for the Cycle Harmony Laddus project. Below are the specific test cases I will execute:
+
+1. BACKEND API VERIFICATION
+   - [ ] GET /health: Verify server is alive and DB is connected.
+   - [ ] GET /api/ingredients: Verify the ingredient list is fetched correctly.
+   - [ ] GET /api/orders: Verify retrieval of order list (requires admin simulated check).
+   - [ ] AI Agent Integration: Test `server/utils/aiAgent.js` by checking if it handles queries correctly.
+
+2. FRONTEND UI & UX VERIFICATION
+   - [ ] Landing Page: Verify Hero Section, Benefits, and CTA sections render without errors.
+   - [ ] Navigation: Verify links to 'About', 'Product', and 'Admin' work correctly.
+   - [ ] Admin Dashboard: Verify the Sidebar component is functional and links to correct sub-pages.
+   - [ ] Form Validation: Check if the contact/order forms have basic validation.
+
+3. INTEGRATION & END-TO-END
+   - [ ] Database Connection: Ensure the server connects to MongoDB on startup.
+   - [ ] Telegram Listener: Verify the Telegram bot listener starts correctly.
+   - [ ] Responsive Design: Check layout stability across different viewports.
+
+Testing will be performed using automated scripts (curl/browser subagent) and manual checks.
+
