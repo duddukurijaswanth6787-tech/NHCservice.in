@@ -9,7 +9,12 @@ import { globalRateLimiter } from './middlewares/rateLimiter.js';
 
 const app = express();
 
+// Trust the Railway proxy
+app.set('trust proxy', 1);
+console.log('✅ Express trust proxy enabled');
+
 // Performance & Security Middlewares
+
 app.use(compression());
 app.use(helmet());
 app.use(cors({
