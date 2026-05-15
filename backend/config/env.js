@@ -30,4 +30,7 @@ export const config = {
   allowedOrigins: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:8080'],
   geminiApiKey: process.env.GEMINI_API_KEY,
   openaiApiKey: process.env.OPENAI_API_KEY,
+  telegramBotToken: process.env.TELEGRAM_BOT_TOKEN,
+  telegramWebhookUrl: process.env.TELEGRAM_WEBHOOK_URL,
 };
+

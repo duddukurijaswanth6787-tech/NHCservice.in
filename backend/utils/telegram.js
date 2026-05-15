@@ -32,3 +32,32 @@ export async function sendTelegramMessage(message) {
         console.error('❌ Telegram Connection Error:', error.message);
     }
 }
+
+/**
+ * Automatically registers the webhook with Telegram
+ */
+export async function initTelegramWebhook() {
+    const token = process.env.TELEGRAM_BOT_TOKEN;
+    const webhookUrl = process.env.TELEGRAM_WEBHOOK_URL;
+
+    if (!token || !webhookUrl) {
+        console.warn('⚠️ Telegram Webhook skip: Missing token or URL');
+        return;
+    }
+
+    const fullUrl = `${webhookUrl}/api/v1/telegram/webhook`;
+
+    try {
+        const response = await fetch(`https://api.telegram.org/bot${token}/setWebhook?url=${fullUrl}`);
+        const data = await response.json();
+        
+        if (data.ok) {
+            console.log(`✅ Telegram Webhook Registered: ${fullUrl}`);
+        } else {
+            console.error(`❌ Telegram Webhook Registration Failed: ${data.description}`);
+        }
+    } catch (error) {
+        console.error(`❌ Telegram Webhook Error: ${error.message}`);
+    }
+}
+

@@ -32,17 +32,25 @@ app.get('/health', (req, res) => {
   });
 });
 
+app.get('/telegram/test', (req, res) => {
+  res.status(200).json({ status: 'telegram route active' });
+});
+
+
 // Import Routes
 import authRoutes from './routes/authRoutes.js';
 import orderRoutes from './routes/orderRoutes.js';
 import customerRoutes from './routes/customerRoutes.js';
 import ingredientRoutes from './routes/ingredientRoutes.js';
+import telegramRoutes from './routes/telegramRoutes.js';
 
 // API Routes
 app.use('/api/v1', authRoutes);
 app.use('/api/v1', orderRoutes);
 app.use('/api/v1', customerRoutes);
 app.use('/api/v1', ingredientRoutes);
+app.use('/api/v1/telegram', telegramRoutes);
+
 
 
 // Global Error Handler

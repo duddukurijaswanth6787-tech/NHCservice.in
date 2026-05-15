@@ -2,6 +2,7 @@ import app from './app.js';
 import { config, validateEnv } from './config/env.js';
 import { connectDB } from './config/database.js';
 import logger from './utils/logger.js';
+import { initTelegramWebhook } from './utils/telegram.js';
 
 /**
  * Initializes and starts the production server.
@@ -18,6 +19,7 @@ const startServer = async () => {
     const server = app.listen(config.port, () => {
       logger.info(`🚀 Server running in ${config.nodeEnv} mode on port ${config.port}`);
       logger.info(`🌐 Health check: http://localhost:${config.port}/health`);
+      initTelegramWebhook();
     });
 
     // 4. Handle Graceful Shutdown
