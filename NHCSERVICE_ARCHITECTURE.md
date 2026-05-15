@@ -36,7 +36,7 @@ To bridge the gap between healthcare data and actionable wellness guidance throu
 
 ## 3. Folder Structure Mapping
 
-### /Frontend
+### /frontend
 - `src/api/`: Centralized API client and services.
 - `src/components/`: Reusable UI components (shadcn/ui based).
 - `src/pages/`: Main application views.

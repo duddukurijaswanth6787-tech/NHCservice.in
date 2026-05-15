@@ -29,7 +29,7 @@ NHCservice is a professional, full-stack application designed for menstrual heal
 
 3. **Frontend Setup:**
    ```bash
-   cd ../Frontend
+   cd ../frontend
    cp .env.example .env
    npm install
    npm run dev
@@ -39,7 +39,7 @@ NHCservice is a professional, full-stack application designed for menstrual heal
 For a deep dive into the system design, see [NHCSERVICE_ARCHITECTURE.md](./NHCSERVICE_ARCHITECTURE.md).
 
 ## 🛠 Tech Stack
-- **Frontend:** React, Vite, TypeScript, TailwindCSS, Zustand.
+- **frontend:** React, Vite, TypeScript, TailwindCSS, Zustand.
 - **Backend:** Node.js, Express, MongoDB, Redis, JWT.
 - **AI:** Google Gemini 2.0 Flash Lite / OpenAI.
 - **DevOps:** Docker, Vercel, Railway, GitHub Actions.

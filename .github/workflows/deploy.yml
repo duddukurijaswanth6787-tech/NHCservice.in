@@ -22,7 +22,8 @@ jobs:
       
       - name: Frontend Lint & Build
         run: |
-          cd Frontend
+          cd frontend
+
           npm ci
           npm run build
 

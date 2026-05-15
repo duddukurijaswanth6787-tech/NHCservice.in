@@ -37,7 +37,7 @@ This guide contains the final, validated configuration and deployment steps for 
 
 ### 4. Vercel (Frontend Deployment)
 1. Connect your GitHub repository.
-2. Select the `Frontend` directory.
+2. Select the `frontend` directory.
 3. Configure the build command: `npm run build`.
 4. Configure the output directory: `dist`.
 5. Add the `VITE_API_URL` variable (Point to your Railway URL).
