@@ -14,7 +14,9 @@ const startServer = async () => {
 
     // 2. Connect Database
     await connectDB();
-
+     app.get("/", (req, res) => {
+  res.send("NHCService Backend Running Successfully");
+   });
     // 3. Start Listening
     const server = app.listen(config.port, () => {
       logger.info(`🚀 Server running in ${config.nodeEnv} mode on port ${config.port}`);
